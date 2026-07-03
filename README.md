@@ -47,18 +47,18 @@ right stick, with a hold-to-ramp acceleration curve.
 
 ## Status / findings
 
-- **Global client:** untested here, but virtual ViGEm pads are the basis of
+- **Global client:** untested, but virtual ViGEm pads are the basis of
   the DS4Windows ecosystem widely used with WuWa global, so expected to work.
 - **CN client (independent launcher):** **does not accept virtual controllers.**
-  Verified end-to-end delivery (hooks → feed loop → ViGEm device → XInput
+  VERIFIED end-to-end delivery (hooks → feed loop → ViGEm device → XInput
   slot 0 confirmed live via `xinput_probe.py`) — game ignores the pad on both
   the XInput path (X360 pad) and the HID path (DS4 pad). Steam Input
-  injection is blocked by the ACE anti-cheat (overlay does not load). No
+  injection is blocked by the ACE anti-cheat. No
   in-game input-mode selector exists to force controller mode. Conclusion:
   ACE on the CN client filters virtual input devices at a level below
   anything a user-mode feeder can address. Physical controllers work.
 
-## Debugging notes (hard-won)
+## Debugging notes
 
 - Low-level keyboard hooks suppress the message queue but **cannot block
   Raw Input** — irrelevant here since the game runs in controller mode, but
