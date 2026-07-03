@@ -72,3 +72,10 @@ right stick, with a hold-to-ramp acceleration curve.
   loop errors instead of dying silently.
 - `XInputGetState`'s `dwPacketNumber` only increments on state **change**;
   a frozen packet counter with a connected slot means nobody is feeding it.
+
+  ## Acknowledgments
+
+- [ViGEmBus](https://github.com/nefarius/ViGEmBus) by Benjamin "Nefarius" Höglinger-Stelzer —
+  the virtual gamepad bus driver this entire project runs on (BSD-3-Clause)
+- [vgamepad](https://github.com/yannbouteiller/vgamepad) by Yann Bouteiller —
+  Python bindings for ViGEm (MIT)
